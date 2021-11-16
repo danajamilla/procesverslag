@@ -47,11 +47,12 @@ Ik ben gek op dieren. Ik vind het dan ook belangrijk dat alle dieren die in het 
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
-<img src="images/homepagina.png" width="375px" alt="homepagina">
+/Users/danatehubijuluw/Desktop/Schermafbeelding 2021-11-15 om 11.23.51.png
+<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
-<img src="images/matchpagina.png" width="375px" alt="matchpagina">
+<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
