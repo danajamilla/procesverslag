@@ -41,18 +41,13 @@ https://ikzoekbaas.dierenbescherming.nl
 Ik ben gek op dieren. Ik vind het dan ook belangrijk dat alle dieren die in het dierenasiel zitten, een plekje krijgen bij een warm thuis. Het lijkt mij leuk om deze website aan te pakken.
 
 
-
-/Users/danatehubijuluw/Desktop/Schermafbeelding 2021-11-15 om 11.24.28.png
-
-
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
-/Users/danatehubijuluw/Desktop/Schermafbeelding 2021-11-15 om 11.23.51.png
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/homepagina.png" width="375px" alt="omschrijving van de pagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/matchpagina.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
