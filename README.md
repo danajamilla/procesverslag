@@ -59,13 +59,14 @@ hier de naam van de pagina
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="images/breakdown-1.png" width="375px" alt="breakdown van de hele pagina">
+<img src="images/breakdown-2.png" width="375px" alt="breakdown van de hele pagina">
 
-### dynamisch deel (bijv menu): 
+<!--> ### dynamisch deel (bijv menu): 
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel"> <!--> 
 
 </details>
 
@@ -79,17 +80,21 @@ hier de naam van de pagina
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+De oefening van deze week ging eigenlijk best goed. Ik herinnerde mij weer een aantal dingen van vorig jaar, dus dat was handig. Wel blijf ik dingen ontdekken die
+toch anders moeten dan ik gewend ben of gedacht had. Wel heb ik er veel van geleerd.
+
+<img src="images/code-week2.png" width="375px" alt="code en opdracht week 2">
+
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| marijn          | tessa              | dana                | sadie            |
+| ---             | ---                | ---                 | ---              |
+| HTML video      |                    |                     |                  |
+| achtergrond img | nog geen vragen    | img als achtergrond | nog geen vragen  |
+| ...             | ...                | ...                 | ...              |
 
 
 ### Verslag van meeting
