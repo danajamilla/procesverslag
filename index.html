@@ -8,22 +8,53 @@
 </head>
 <body>
     <header> 
-        <img src="img/hond.jpg" alt="asielhond">
+
         <a href="index.html"> <img class="logo" src="img/logo-ikzoekbaas.jpg" alt="logo asiel"> </a>
         <nav>
             <button onclick="window.location.href='#';">Steun ons</button> 
             <button onclick="window.location.href='#';">🧡</button> 
+            <button aria-hidden="true">  
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </button>
+            <ul> 
+                <li><a href="#"> Home </a></li>
+                <li><a href="#"> Zoek een dier </a></li>
+                <li><a href="#"> Succesvol geplaatst </a></li>
+                <li><a href="#"> Dierenasielen </a></li>
+                <li><a href="#"> Meet Your Match </a></li>
+                <li><a href="#"> Adoptietarieven </a></li>
+                <li><a href="#"> Tips voor de baas </a></li>
+
+                <button> Steun ons</button>
+
+            </ul>
         </nav>
 
-       
-        <section class="headerimg">
-            <p>Ik zoek baas<p> 
-        </section>
-
     </header>
+    <main> 
+        <section> 
+            <ul>
+                <li><img src="img/header-hond.jpg" alt="hond"/></li>
+                <li><img src="img/header-konijn.jpg" alt="konijn"></li>
+                <li><img src="img/header-hond2.jpg" alt="hond2"></li>
+                <li><img src="img/header-hond3.jpg" alt="hond"></li>
+            </ul>
+         </section>
 
-    <section>
-        <h1>Zoek uit 1.006 asieldieren die op een nieuw baasje wachten </h1>
-    </section>
+         <h1> ik zoek baas</h1>
+
+        <section>
+            <h1>Zoek uit 1.006 asieldieren die op een nieuw baasje wachten</h1>
+
+            <form> 
+                <label for="name">Soort </label>
+                <input type="text" name="name" id="soort" required>
+
+            </form>
+        </section>
+    </main> 
+    <script src="script.js"></script>
 </body>
 </html>
