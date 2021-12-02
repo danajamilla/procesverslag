@@ -100,10 +100,8 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- sanne heeft uitgelegd hoe je een carroussel/slideshow kunt maken, dit wilde ik graag weten
+- ook door de vragen van andere studenten te beantwoorden leer ik weer nieuwe dingen die ik zelf kan toepassen in mijn website
 
 </details>
 
@@ -117,17 +115,19 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+deze week ben ik bezig geweest met mijn website. ik vond het heel fijn dat we in de les van woensdag tijd kregen om aan onze website te werken. je kunt namelijk samen met andere studenten overleggen en makkelijk met elkaar meekijken en helpen. op deze manier worden je problemen veel sneller opgelost en kun je ook nog is anderen helpen met jouw kennis. als ik er echt niet uit kwam kon ik ook makkelijk iets aan de docent vragen. 
+
+ik loop elke keer tegen verschillende dingen aan, sommige zijn zo weer opgelost en sommige nemen wat meer tijd in. ik ben wel blij dat we morgen weer een aantal dingen kunnen vragen!
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Dana                         | Marijn M                      | Sadie        | Tessa            |
+| ---                          | ---                           | ---          | ---              |
+| hoe maak je een uitklap menu | vlak in de tekst even breedt  | niks         | niks             |
+| en mijn slideshow doet raar  | als de afbeelding             | 
+|                              | (sneaker story page)          | 
 
 
 ### Verslag van meeting
