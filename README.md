@@ -43,7 +43,7 @@ Ik ben gek op dieren. Ik vind het dan ook belangrijk dat alle dieren die in het 
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
-<img src="images/home.png" width="375px" alt="homepagina">
+<img src="https://github.com/danajamilla/procesverslag/blob/main/images/homepagina.png" width="375px" alt="homepagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
