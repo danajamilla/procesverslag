@@ -1,5 +1,414 @@
-/* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+ /************************** 
+        GEHELE WEBSITE 
+  **************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;                        /* alle standaard marges rondom de pagina verwijderen */
 }
 
+:root {
+    --background-button-color:#ff5400;
+    --text-color: #ffffff;
+    --click-text-color: #222;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+  /************************** 
+            HEADER 
+  **************************/
+
+.logo {
+      position: absolute;
+      width: 60px;  
+      margin:1em;
+} 
+
+header {
+    position: fixed;                                /* header staat vast tijdens scrollen */ 
+    z-index:50;
+    display:flex;                 
+
+    background-color: blue;
+    width: 100%;
+}
+
+
+    /************************** 
+            NAV
+  **************************/
+
+nav {
+    position: absolute;
+    display: flex;
+    right:0;
+    margin:1em;
+}
+
+header nav ul li a {
+    color:var(--text-color);
+      
+    font-size: 1.375em;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 2em;
+
+    margin: 3em 1em 1em 1em;                      /* ????? ik wil aan de bovenkant meer margin */ 
+}
+
+header nav ul li a:hover {                        /* als je over de listitems in het menu hovert */ 
+    color:var(--click-text-color);
+}
+
+nav.menuOpen ul {
+    transform:translateX(0);                        /* classlist uit javascript */ 
+}
+
+nav ul {
+    position: fixed;                                /* uit voorbeeldcode oefening 3 Media Queries en Grid gehaald */ 
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+
+    transform:translateX(100%);                     /* de ul wordt helemaal uit beeld gebracht */ 
+    transition: .3;
+
+    background-color: #ff5400;
+    list-style: none;
+}
+
+ul button {
+    background-color:yellow;
+    color: red;
+}
+
+button:nth-of-type(1) {                           /* dit spreekt alleen de 1e button van alle buttons aan */
+    position: relative;
+    z-index:100;
+    padding:1em;
+    right:.5em;
+    border: none;
+
+    background-color:var(--background-button-color);
+    color:var(--text-color);
+
+    font-weight:400;
+    font-size:0.9em;
+    text-transform:uppercase;
+}
+
+button:nth-of-type(2) {                            /* dit spreekt alleen de 2e button van alle buttons aan */
+    position: relative;
+    z-index:100;
+    display: flex;
+    justify-content:center;
+
+
+    padding:1em;
+    border: none;
+
+    width:3em;
+    height:3em;
+
+    background-color:var(--text-color);
+}
+
+nav button:nth-of-type(3) { 
+    background-color:var(--background-button-color);
+    border: none;
+
+    width:3em;
+    height:3em;
+      
+    position: relative;
+    z-index:100;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
+
+/************************** 
+     NAV: HAMBURGER MENU
+**************************/
+
+nav button:nth-of-type(3) span { 
+    display:block;
+    width:30%;
+    height:1px;
+    background-color:black;
+
+    position: absolute;
+  }
+
+nav button:nth-of-type(3) span:nth-of-type(1) {
+    transform: translateY(-5px);
+    background-color: var(--click-text-color);
+  } 
+
+nav button:nth-of-type(3) span:nth-of-type(2) {
+    background-color: var(--click-text-color);
+} 
+
+nav button:nth-of-type(3) span:nth-of-type(3) {
+    transform: translateY(5px);
+    background-color: var(--click-text-color);
+} 
+
+nav.menuOpen button:nth-of-type(3) span:nth-of-type(1) {
+    transform: rotate(45deg);
+} 
+
+nav.menuOpen button:nth-of-type(3) span:nth-of-type(2) {
+    opacity: 0;
+} 
+
+nav.menuOpen button:nth-of-type(3) span:nth-of-type(3) {
+    transform: rotate(-45deg);
+} 
+
+/************************** 
+NAV: UITKLAP MENU ZOEK EEN DIER
+**************************/
+
+nav.menuOpen li:nth-of-type(2) {
+    background-color: black;
+} 
+
+/************************** 
+        MAIN
+**************************/
+
+main img {
+    position: absolute;
+    
+    width: 100%;
+    height: auto;
+}
+
+main h1 {
+    background-color:gold;
+
+    position: relative;
+    z-index:1;
+
+    font-weight:700;
+    font-size:1em;
+    text-transform:uppercase;
+}
+
+
+   /************************** 
+        SLIDESHOW
+  **************************/
+  
+main section:nth-of-type(1) {                            /* de eerste section in de main --> slideshow */
+    position: relative;
+
+    /* max-width: 30em; */
+    height: 15em;
+}
+
+
+@keyframes slideshow {                                  /* code van Sanne */
+	0% {
+		left:100%;
+	}
+	12.5%, 25% {
+		left:0%;
+	}
+	37.5%, 100% {
+		left:-100%;
+	}
+}
+
+main ul {
+	position:relative;
+	margin:0;
+	padding:0;
+    list-style:none;
+    }
+
+main li {
+	position:absolute;
+    width:100%;
+
+	animation-name:slideshow;                           /* code van Sanne */
+	animation-duration:8s;
+	animation-iteration-count:infinite;
+}
+
+main section ul li img {                                /* alle img van de slideshow */
+    height: 15em;
+    object-fit: cover;
+ 
+}
+
+main li:nth-of-type(1) {                                /* de animatie tijden van alle img */
+    animation-delay:0s;
+}
+
+main li:nth-of-type(2) {
+    animation-delay:2s;
+
+}
+
+main li:nth-of-type(3) {
+    animation-delay:4s;
+}
+
+main li:nth-of-type(4) {
+    animation-delay:6s;
+
+}
+
+
+ /************************** 
+            FORM
+  **************************/
+
+  form {
+      display: grid;
+      grid-template-columns: 2fr 1fr;                   /* fr = fractie, 1 = 1/3, 2 = 2/3, 3  = 3/3*/
+      position: relative;
+
+  }
+
+  label, input, button, select {
+    grid-column-start:1;
+    grid-column-end:3;
+  }
+
+  input:nth-of-type(1) {
+      grid-column-start:1;
+      grid-column-end:2;
+  }
+
+  select:nth-of-type(2) {
+    grid-column-start:2;
+    grid-column-end:3;
+}
+
+main section h1:nth-of-type(1) {
+    color: green;
+    background-color: var(--text-color);
+    border: solid .3em yellow;
+    
+    font-size: 1.375em;
+    text-align: center;
+    line-height: 1.625em;
+    text-transform: none;
+    font-weight: 500;
+
+    
+    position: relative;
+    /* top:6em; */
+    margin-left:auto;
+    margin-right: auto;
+    width: 12em;
+    padding: 1em;
+}
+
+section form {
+    /* position: absolute;
+    top:25em; */
+    max-width: 20em;
+    margin-left:auto;
+    margin-right: auto;
+
+    background-color: green;
+}
+
+/************************** 
+      IN HET ZONNETJE
+  **************************/
+
+  section:nth-of-type(3) {
+      background-color: red;
+      height: 30em;
+      
+  }
+
+  section:nth-of-type(3) img {
+      width: 9em;
+      height: auto;
+
+      display: flex;
+  }
+
+  section:nth-of-type(3) a {
+   
+   
+  } 
+
+  /************************** 
+        SUCCESVOL GEPLAATST
+  **************************/
+
+  section:nth-of-type(4) {
+    background-color: yellow;
+    height: 25em;
+}
+
+  /********************************************************************
+                            PAGINA 2
+  *********************************************************************/
+
+    /************************** 
+            MAIN
+  **************************/
+  .pagina2 section:nth-of-type(3) {
+      background-color: pink;
+  }
+
+  .pagina2 section:nth-of-type(3) img {
+    width: 10em;
+    flex-direction: column;
+}
+
+.pagina2 ul {
+    display: flex;
+}
+
+  /************************** 
+            FOOTER
+  **************************/
+
+  footer {
+      background-color: rgb(182, 182, 182);
+  }
+
+  footer ul {
+ display: flex;
+ text-decoration: none;
+ list-style:none;
+
+  }
+
+  footer li {
+      text-decoration: none;
+      list-style:none;
+  }
+
+  footer ul:nth-of-type(1) {
+    width: 1.5em;
+    margin-right: .5em;
+
+    flex-direction: row;
+}
+
+  footer ul:nth-of-type(2) img {
+      width: 1.5em;
+      margin-right: .5em;
+
+      flex-direction: row;
+  }
+
+  footer ul:nth-of-type(2) button {
+    left: 1em;
+  }
