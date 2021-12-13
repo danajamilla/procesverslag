@@ -43,7 +43,7 @@ Ik ben gek op dieren. Ik vind het dan ook belangrijk dat alle dieren die in het 
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
-<img src="https://github.com/danajamilla/procesverslag/blob/main/images/homepagina.png" width="375px" alt="homepagina">
+<img src="images/home.png" width="375px" alt="homepagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
@@ -59,8 +59,8 @@ hier de naam van de pagina
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="https://github.com/danajamilla/procesverslag/blob/main/images/breakdown-1.png" width="375px" alt="breakdown van de hele pagina">
-<img src="https://github.com/danajamilla/procesverslag/blob/main/images/breakdown-2.png" width="375px" alt="breakdown van de hele pagina">
+<img src="images/breakdown-1.png" width="375px" alt="breakdown van de hele pagina">
+<img src="images/breakdown-2.png" width="375px" alt="breakdown van de hele pagina">
 
 <!--> ### dynamisch deel (bijv menu): 
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
@@ -133,10 +133,9 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- De studentassistenten hebben linkjes gedeeld waar ik kan zien hoe een uitklap menu werkt
+- Deanna heeft meegekeken met mijn slideshow en deze is weer gerepareerd
+- De studentassistenten hebben de rest van mijn groepje ook met hun probleempjes geholpen --> iedereen kon weer verder!
 
 </details>
 
@@ -187,26 +186,26 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Deze week was ik helaas ziek en heb ik een aantal dingen gemist. Omdat de webite volgende week af moet, heb ik dit als hoogste prioriteit gekozen en ben ik hier verder mee aan de slag gegaan. Het loopt nog wat stroef en ik loop nog tegen een aantal dingen aan, maar het moet vast goed komen.
+
+<img src="images/website-voortgang-week4.png" width="375px" alt="voortgang">
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Dana                  | student 2          | student 3    | student 4        |
+| ---                   | ---                | ---          | ---              |
+| ik zit nog steeds     | en dit             | en ik dit    | en dan ik dat    |
+| vast met een uitklap  | dit als er tijd is | nog een punt | dit wil ik zeker |
+| venster               | ...                | ...          | ...              |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Sanne heeft mij geholpen met een uitklap venster in mijn formulier, uiteindelijk was dit gelukkig helemaal niet zo ingewikkeld!
+- Na de meeting met het groepje heb ik samen met Sanne nog even mijn website doorgelopen, we hebben gekeken naar welke elementen erin moeten en welke weggelaten mogen worden. Dit heeft mij erg geholpen!
 
 </details>
 
@@ -220,7 +219,16 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik had moeite met een aantal dingen. 
+1. ik moest 4 images naast elkaar en onder elkaar plaatsen die als link dienen. dit lukte mij eerst niet, ookal leek dit simpel. 
+<img src="images/zonnetje-voorbeeld.png" width="375px" alt="voorbeeld"> Hoe het moet
+<img src="images/zonnetje-eigen-code.png" width="375px" alt="eigen-code"> Hoe het er bij mij uitzag (alle beelden over elkaar)
+
+2. de slideshow werd op de tweede pagina ook meegenomen bij andere images, maar dit was niet de bedoeling.
+<img src="images/slideshow-kat.png" width="375px" alt="slideshow-kat">
+
+
+
 
 ### Screenshot(s)
 
