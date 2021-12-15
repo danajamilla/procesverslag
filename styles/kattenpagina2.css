@@ -19,7 +19,8 @@ section:nth-of-type(1) h2 {
 }
 
 section:nth-of-type(2) {
-    margin-left: 1em;                       /* ruimte links en rechts vanaf de rand */
+    margin-left: 1em;
+    /* ruimte links en rechts vanaf de rand */
     margin-right: 1em;
 }
 
@@ -40,7 +41,7 @@ section:nth-of-type(2) h1 {
 
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 form label:nth-of-type(1) {
@@ -63,14 +64,18 @@ section:nth-of-type(2) select {
 **************************/
 
 section:nth-of-type(3) {
+    /* display: flex; */
     margin: 1em;
 }
 
 section:nth-of-type(3) ul {
     display: flex;
     flex-wrap: wrap;
-    gap:.4em;
+    /* flex-direction: column; */
+    /* width: 100%; */
 }
+
+
 
 section:nth-of-type(3) li {
     background-color: var(--basic-white-color);
@@ -81,18 +86,9 @@ section:nth-of-type(3) li {
     flex-grow: 1;
 }
 
+
 section:nth-of-type(3) article {
-    display: grid;
-    grid-template-columns: 7em 1fr;
-    grid-template-rows: 1fr min-content;
-
-}
-
-section:nth-of-type(3) a:nth-of-type(1) {
-    grid-row: span 2;
-    order:-1;                   /*hiermee gaat de a voor de h2*/
-
-    outline:0;           /*standaard randje bij tab gaat weg*/
+    display: flex;
 }
 
 section:nth-of-type(3) img {
@@ -110,14 +106,11 @@ section:nth-of-type(3) h2 {
     padding: .25em .5em;
 }
 
-section:nth-of-type(3) a:nth-of-type(2) {
+section:nth-of-type(3) span {
     color: var(--basic-white-color);
     background-color: var(--primaire-highlight-color);
 
-    display:flex;
-    align-items: center;
-    gap:.5em;
-
+    position: absolute;
     right: 0;
     bottom: 0;
     padding: .5em;
@@ -125,30 +118,22 @@ section:nth-of-type(3) a:nth-of-type(2) {
     font-size: .7em;
     text-transform: uppercase;
     font-weight: 600;
-    text-decoration: 0;
-    outline:0;                  /*standaard randje bij tab gaat weg*/
+    width: 15.7em;
+    text-align: center;
 }
 
-section:nth-of-type(3) a:nth-of-type(1):focus,
-section:nth-of-type(3) a:nth-of-type(2):focus {
-    box-shadow: 0 0 0 .2em var(--secundaire-highlight-color);
-    z-index:50;
-}
 
-section:nth-of-type(3) a:nth-of-type(2)::before {
-    content: "+";
+section:nth-of-type(3) span>span {
     color: var(--primaire-highlight-color);
     background-color: var(--basic-white-color);
 
-    border-radius: 2em;
-    width: 1.5rem;                  /*code sanne*/
-    height: 1.5rem;
-    font-size: 1.5em;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 0.7em;
+    margin-right: 19em;
 
-
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    width: 2em;
+    height: 2em;
 }
 
 
@@ -162,15 +147,17 @@ section:nth-of-type(3) article button {
     top: .25em;
 }
 
-section:nth-of-type(3) article button:hover {       /* extra zelfverzonen toevoeging */
+section:nth-of-type(3) article button:hover {
+    /* extra zelfverzonen toevoeging */
     font-size: 1.6em;
 }
 
 
-@media screen and (min-width: 670px) {              /*als het scherm voorbij 670px gaat, komen de katten naast elkaar*/
+@media screen and (min-width: 700px) {
 
     section:nth-of-type(3) li {
-        width: 40%;                         /*yunus*/
+        /* background-color: red; */
+        width: 40%;
         justify-content: space-between;
     }
 

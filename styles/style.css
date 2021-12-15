@@ -1,5 +1,472 @@
-/* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+/* dit is de algemene css van de gehele website */
+
+
+/************************** 
+        GEHELE WEBSITE 
+  **************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* alle standaard marges rondom de pagina verwijderen */
 }
 
+
+:root {
+  --primaire-highlight-color: #ff5400;
+  --selected-highlight-color: #9c3b0b;
+  --secundaire-highlight-color: #222;
+  --basic-white-color: #ffffff;
+  --grey-text-color: #959595;
+  --background-color: #efefef;
+  --search-button-color: #dfdf00;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background-color);
+}
+
+/************************** 
+        DARKMODE
+**************************/
+@media (prefers-color-scheme:dark) {                
+  :root {
+    --background-color: #222;
+    --secundaire-highlight-color: #ffffff;
+    --basic-white-color: rgb(204, 204, 204);
+
+
+  }
+}
+
+:root.darkMode {
+  --background-color: #222;
+  --secundaire-highlight-color: #ffffff;
+  --basic-white-color: rgb(204, 204, 204);
+
+}
+
+
+.visually-hidden {                  /* zorgt ervoor dat je de checkbox niet ziet. met behulp van klasgenoot gemaakt, ik vind dit erg lastig*/
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+nav li:nth-of-type(8) {                         /*opmaak van de darkmode button*/
+  color: var(--primaire-highlight-color);
+  background-color: var(--basic-white-color);
+  margin: 1em 0 0 0;
+  padding: .5em .5em .5em 1em;
+
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+/************************** 
+            HEADER 
+  **************************/
+
+.logo {
+    width: 60px;
+}
+
+header {
+    background-color:var(--basic-white-color);
+
+    position: sticky;                     /* header staat op een vaste plek, wanneer hij bovenaan komt blijft hij plakken*/
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    padding: 0 1em;
+}
+
+
+/************************** 
+          NAV
+**************************/
+
+nav {
+    display: flex;
+}
+
+header nav ul li a {
+    color: var(--basic-white-color);
+
+    font-size: 1.375em;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 2em;
+
+    margin: 3em 1em 1em 1em;
+}
+
+header nav ul li a:hover {                  /* als je over de listitems in het menu hovert */
+    color: var(--secundaire-highlight-color);
+}
+
+nav.menuOpen ul {
+    transform: translateX(0);               /* classlist uit javascript */
+}
+
+nav ul {
+    position: fixed;              /* uit voorbeeldcode oefening 3 Media Queries en Grid gehaald */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: translateX(100%);          /* de ul wordt helemaal uit beeld gebracht */
+    transition: .3;
+
+    background-color:var(--primaire-highlight-color);
+    list-style: none;
+}
+
+nav button:nth-of-type(1) {                 /* dit spreekt alleen de 1e button van alle buttons in de nav aan */
+    background-color: var(--primaire-highlight-color);
+    color: var(--basic-white-color);  
+
+    position: relative;
+    cursor: pointer;
+
+    padding: 1em;
+    right: .5em;
+    border: none;
+    height: 2.9em;          /* even groot als de andere 2 buttons*/
+
+    font-weight: 400;
+    font-size: 0.9em;
+    text-transform: uppercase;
+
+    outline:0;
+}
+
+nav button:nth-of-type(2) {                 /* dit spreekt alleen de 2e button van alle buttons in de nav aan, etc... */
+    background-color: var(--basic-white-color);
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    padding: 1em;
+    border: 0;
+    width: 3em;
+    height: 3em;
+}
+
+
+nav button:nth-of-type(2) span {
+    color: var(--basic-white-color);
+    background-color: var(--primaire-highlight-color);
+
+    position: absolute;
+    right: .1em;
+    top: .1em;
+    min-width: 1.25em;
+    padding: 0 .25em;
+
+    border-radius: .625em;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.25em;
+}
+
+
+nav button:nth-of-type(3) {
+    background-color: var(--primaire-highlight-color);
+    
+    border: 0;
+    width: 3em;
+    height: 3em;
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+    outline:none;
+}
+
+nav button:nth-of-type(1):focus, nav button:nth-of-type(3):focus {
+    box-shadow: 0 0 0 .2em var(--secundaire-highlight-color);
+    z-index:50;
+}
+
+/************************** 
+   NAV: HAMBURGER MENU
+**************************/
+
+nav button:nth-of-type(3) span {                    /* code sanne */
+    background-color: var(--secundaire-highlight-color);
+
+    display: block;
+    position: absolute;
+    width: 30%;
+    height: 1px;
+}
+
+nav button:nth-of-type(3) span:nth-of-type(1) {
+    transform: translateY(-5px);
+    background-color: var(--secundaire-highlight-color);
+}
+
+nav button:nth-of-type(3) span:nth-of-type(2) {
+    background-color: var(--secundaire-highlight-color);
+}
+
+nav button:nth-of-type(3) span:nth-of-type(3) {
+    transform: translateY(5px);
+    background-color: var(--secundaire-highlight-color);
+}
+
+nav.menuOpen button:nth-of-type(3) span:nth-of-type(1) {
+    transform: rotate(45deg);
+}
+
+nav.menuOpen button:nth-of-type(3) span:nth-of-type(2) {
+    opacity: 0;
+}
+
+nav.menuOpen button:nth-of-type(3) span:nth-of-type(3) {
+    transform: rotate(-45deg);
+}
+
+
+/************************** 
+        SLIDESHOW
+  **************************/
+
+main section:nth-of-type(1) {           /* de eerste section in de main --> slideshow */
+    position: relative;
+    height: 15em;
+}
+
+
+@keyframes slideshow {              /* code van Sanne */
+    0% {
+        left: 100%;
+    }
+
+    12.5%,
+    25% {
+        left: 0%;
+    }
+
+    37.5%,
+    100% {
+        left: -100%;
+  }
+}
+
+main ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main section:nth-of-type(1) li {
+    position: absolute;
+    width: 100%;
+
+    animation-name: slideshow;            /* code van Sanne */
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+main section:nth-of-type(1) ul li img {         /* alle img van de slideshow */
+    height: 15em;
+    object-fit: cover;
+}
+
+main li:nth-of-type(1) {            /* de animatie tijden van alle img */
+    animation-delay: 0s;
+}
+
+main li:nth-of-type(2) {
+    animation-delay: 2s;
+}
+
+main li:nth-of-type(3) {
+    animation-delay: 4s;
+}
+
+main li:nth-of-type(4) {
+    animation-delay: 6s;
+}
+
+
+/************************** 
+            MAIN
+**************************/
+
+main section:nth-of-type(1) img {
+    position: absolute;
+
+    width: 100%;
+    height: auto;
+}
+
+main section:nth-of-type(1) h1 {
+    color: var(--primaire-highlight-color);
+
+    position: relative;
+    z-index: 1;
+
+    font-weight: 700;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+main section:nth-of-type(1) h1 {
+    position: absolute;
+    top: 50%;
+    left: 1em;
+}
+
+/************************** 
+            FOOTER
+  **************************/
+
+footer {
+    background-color: var(--basic-white-color);
+
+    padding: 1em;
+    position: relative;
+}
+
+/**** 1e ul *****/
+
+footer>button:first-of-type {           /* omhoog button, met de > selecteer ik ALLEEN de buttons in de footer (niet in ul's, il's, etc.) */
+    background-color: var(--background-color);
+    color: var(--primaire-highlight-color);
+    border: 0;
+
+    font-size: 1.2em;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: .5em .8em;
+    cursor: pointer;
+}
+
+footer ul {
+    text-decoration: 0;
+    list-style: none;
+}
+
+footer ul:nth-of-type(1) {
+    flex-direction: row;
+}
+
+footer li {
+    text-decoration: 0;
+    list-style: 0;
+    text-transform: capitalize;
+}
+
+footer li a {
+    color: var(--secundaire-highlight-color);
+
+    font-size: .9em;
+    text-decoration: 0;
+    line-height: 2em;
+}
+
+footer li a:hover,
+footer li a:focus {
+    color: var(--primaire-highlight-color);
+}
+
+footer section p:nth-of-type(1) {       /* icon */
+    font-size: 1.7em;
+    margin: 1em 0 0 0;
+}
+
+footer section p:nth-of-type(2) {           /* maak gratis... */
+    color: var(--secundaire-highlight-color);
+    font-size: .9em;
+}
+
+
+footer section a {
+    color: var(--primaire-highlight-color);
+
+    text-decoration: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9em;
+
+    margin-right: 1em;
+}
+
+footer section a:hover {
+    color: var(--secundaire-highlight-color);
+
+}
+
+footer p:nth-of-type(1) {               /* volg ons */
+    color: var(--grey-text-color);
+
+    font-size: .8em;
+    margin: 2em 0 1em 0;
+}
+
+/**** 2e ul *****/
+
+footer p:nth-of-type(2) {               /* copyright*/
+    margin-bottom: 1.5em;
+    color: var(--secundaire-highlight-color);
+    font-size: .9em;
+}
+
+footer ul:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+}
+
+footer ul:nth-of-type(2) img {
+  width: 1.5em;
+  margin-right: .5em;
+  margin-bottom: 1em;
+}
+
+footer ul:nth-of-type(2) button {
+  background-color: var(--primaire-highlight-color);
+  color: var(--basic-white-color);
+
+  padding: 1em;
+  left: 8em;
+  border: none;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: .9em;
+
+  cursor: pointer;
+}
+
+footer ul:nth-of-type(2) button:hover,
+footer ul:nth-of-type(2) button:focus {
+  background-color: var(--basic-white-color);
+  color: var(--primaire-highlight-color);
+}
