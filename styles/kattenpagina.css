@@ -84,15 +84,14 @@ section:nth-of-type(3) li {
 section:nth-of-type(3) article {
     display: grid;
     grid-template-columns: 7em 1fr;
-    grid-template-rows: 1fr min-content;
-
+    grid-template-rows: 1fr min-content;            /* sanne */
 }
 
 section:nth-of-type(3) a:nth-of-type(1) {
-    grid-row: span 2;
-    order:-1;                   /*hiermee gaat de a voor de h2*/
+    grid-row: span 2;               /* span van sanne */
+    order:-1;                   /* hiermee gaat de a voor/boven de h2 */
 
-    outline:0;           /*standaard randje bij tab gaat weg*/
+    outline:0;           /* standaard randje bij tab gaat weg */
 }
 
 section:nth-of-type(3) img {
@@ -170,7 +169,7 @@ section:nth-of-type(3) article button:hover {       /* extra zelfverzonen toevoe
 @media screen and (min-width: 670px) {              /*als het scherm voorbij 670px gaat, komen de katten naast elkaar*/
 
     section:nth-of-type(3) li {
-        width: 40%;                         /*yunus*/
+        width: 40%;                                  /*yunus*/
         justify-content: space-between;
     }
 

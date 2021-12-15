@@ -1,3 +1,7 @@
+/********************   
+        DARKMODE
+ ********************/
+
 var colorChangeInput = document.querySelector("header input");
 
 colorChangeInput.addEventListener('change', switchenVanModus);

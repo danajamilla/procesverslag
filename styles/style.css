@@ -376,7 +376,7 @@ footer ul:nth-of-type(1) {
 
 footer li {
     text-decoration: 0;
-    list-style: 0;
+    list-style: none;
     text-transform: capitalize;
 }
 

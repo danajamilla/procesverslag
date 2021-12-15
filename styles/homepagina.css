@@ -52,10 +52,10 @@ section form {
 }
 
 label, input, button, select {
-  grid-column-start:1;                              /* sanne */
-  grid-column-end:3;                                /* sanne */
+    grid-column-start:1;                              /* sanne */
+    grid-column-end:3;                                /* sanne */
 
-  margin-bottom:.3em;
+    margin-bottom:.3em;
 }
 
 form select, input {
@@ -252,11 +252,11 @@ section:nth-of-type(4) ul li a {
     height: 18em;               /*sanne, hoogte van de afbeelding*/
 }
 
-#metverloop {               /* id om een verloop te maken, code van pencode sanne*/
+.metverloop {               /* id om een verloop te maken, code van pencode sanne*/
     position: relative;
 }
 
-#metverloop h2 {   /* id om een verloop te maken, code van pencode sanne*/
+.metverloop h2 {   /* class om een verloop te maken, code van pencode sanne*/
     background-image:linear-gradient( rgba(0,0,0,0), rgba(0, 0, 0, 0.63) );
     color:var(--primaire-highlight-color);
 

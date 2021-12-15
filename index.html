@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="styles/homepagina.css" /> 
 
 </head>
-<body>
-    <header> 
-
+<body> <!-- BODY -->
+    <header> <!-- HEADER -->
         <a href="index.html"> <img class="logo" src="img/logo-ikzoekbaas.jpg" alt="logo asiel"> </a>
-        <nav>
-            <button aria-label="Naar steun ons pagina" href="#">Steun ons</button> 
-            <button aria-label="Wishlist bekijken" href="#">🧡 <span>0</span></button> 
+        <nav> <!-- NAV -->
+            <button aria-label="Naar steun ons pagina">Steun ons</button> 
+            <button aria-label="Wishlist bekijken">🧡 <span>0</span></button> 
             <button aria-hidden="true">  
                 <span> </span>
                 <span> </span>
@@ -32,9 +31,9 @@
                     <label for="dark-mode">Dark mode</label></li>
             </ul>
         </nav>
-
     </header>
-    <main> 
+
+    <main> <!-- MAIN -->
         <section> <!-- 1e section -->
             <h1> ikzoekbaas</h1>
             <ul>
@@ -63,7 +62,7 @@
                 <label for="woonplaats">Zoek in jouw buurt <strong> (optioneel) </strong> </label>
                 <input type="text" name="name" id="woonplaats" required> <!-- dit veld is verplicht, anders kan de gebruiker niet verder-->
 
-                <select name="km" id="aantal km">
+                <select name="km" id="aantal-km">
                     <option value="">+10 km</option>
                     <option value="">+25 km</option>
                     <option value="">+50 km</option>
@@ -87,8 +86,7 @@
                     <option value="4-tot-8">4 tot 8 jaar</option>
                     <option value="9-of-ouder">9 jaar of ouder</option>
                 </select>
-
-                <button aria-label="Zoeken" href="#">Zoeken</button>             
+                <button aria-label="Zoeken">Zoeken</button>             
             </form>
         </section>
 
@@ -104,18 +102,21 @@
                         <img src="img/in-het-zonnetje-1.jpeg" alt="Hond in het zonnetje">
                     </a>
                 </li>
+
                 <li> 
                     <a href="#">
                         <h2> Tom </h2>
                         <img src="img/in-het-zonnetje-2.jpeg" alt="Hond in het zonnetje">
                     </a>
                 </li>
+
                 <li> 
                     <a href="#">
                         <h2> Tom </h2>
                         <img src="img/in-het-zonnetje-3.jpeg" alt="Hond in het zonnetje">
                     </a>
                 </li>
+
                 <li>
                     <a href="#">
                         <h2> Tom </h2>
@@ -130,7 +131,7 @@
             <a href="#">Bekijk meer verhalen ></a>
 
             <ul>
-                <li id="metverloop">
+                <li class="metverloop">
                     <a href="#">
                         <h2> Hazel </h2>
                         <p> Hazel hebben wij op 20-09-2021 geadopteerd uit het Dierenasiel Zuidwolde in Groningen. 
@@ -138,31 +139,30 @@
                             In...</p>
                         <img src="img/hazel-hond.jpeg" alt="Hond Hazel">
                     </a>
-                   
                 </li>
-                <li id="metverloop">
+
+                <li class="metverloop">
                     <a href="#">
                         <h2> Fred </h2>
                         <p> Fred is nu iets langer dan een maand bij ons thuis en aan de foto te zien vermaakt hij zich prima hier. 
                             Fred houdt vooral heel erg van jagen en...</p>
                         <img src="img/fred-kat.jpeg" alt="Kat Fred">
                     </a>
-                  
                 </li>
-                <li id="metverloop"> 
+
+                <li class="metverloop"> 
                     <a href="#">
                         <h2> Bennie </h2>
                         <p> Het is nu zo'n 2.5 jaar geleden dat wij van Tilburg naar Groningen reden om Bentley, nu Bennie, op te halen. 
                         Wat een lieverd is het toch, vooral met kinderen...</p>
                         <img src="img/bennie-hond.jpeg" alt="Hond Bennie">
                     </a>
-                    
                 </li>
             </ul>
         </section>
     </main> 
 
-    <footer> 
+    <footer>  <!-- FOOTER -->
         <button aria-label = "terug omhoog">⬆</button>
         <ul> <!-- footer > 1e ul-->
             <li> <a href="#"> Zoek asieldieren</a></li>
@@ -173,17 +173,17 @@
             <li> <a href="#"> Steun ons</a></li>
         </ul>
         <section> 
-        <p> 👤 </p>
-        <p> Maak gratis een account aan en ontvang een melding zodra er een nieuw dier voldoet aan jouw zoekcriteria</p>
-        <a href="#">Account aanmaken ></a>
-        <a href="#">Inloggen ></a>
-    </section>
+            <p> 👤 </p>
+            <p> Maak gratis een account aan en ontvang een melding zodra er een nieuw dier voldoet aan jouw zoekcriteria</p>
+            <a href="#">Account aanmaken ></a>
+            <a href="#">Inloggen ></a>
+        </section>
 
         <p> Volg ons</p>
         <ul> <!-- footer > 2e ul-->
-            <li> <a href="#"> <img src="img/facebook-icon.png"/> </a> </li>
-            <li> <a href="#"> <img src="img/twitter-icon.png"/> </a> </li>
-            <li> <a href="#"> <img src="img/instagram-icon.png"/> </a> </li>
+            <li> <a href="#"> <img src="img/facebook-icon.png" alt="facebook-icoon"/> </a> </li>
+            <li> <a href="#"> <img src="img/twitter-icon.png" alt="twitter-icoon"/> </a> </li>
+            <li> <a href="#"> <img src="img/instagram-icon.png" alt="instagram-icoon"/> </a> </li>
             <li> <a href="#"> <button> Nieuwsbrief </button> </a> </li>
         </ul>
 
@@ -192,6 +192,5 @@
     </footer>
     <script src="scripts/script.js"></script>
     <script src="scripts/script-darkmode.js"></script>
-
 </body>
 </html>
