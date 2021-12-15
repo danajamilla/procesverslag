@@ -1,197 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="nl">
+	
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dierenasiel</title>
-    <link rel="stylesheet" href="styles/style.css" /> 
-    <link rel="stylesheet" href="styles/homepagina.css" /> 
-
+	<meta charset="UTF-8">
+	<meta name="author" content="jouw naam">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Howdy FED2122</title>
+	
+	<link href="styles/style.css" rel="stylesheet">
+	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
+
 <body>
-    <header> 
+	<h1>Howdy FED2122</h1>
 
-        <a href="index.html"> <img class="logo" src="img/logo-ikzoekbaas.jpg" alt="logo asiel"> </a>
-        <nav>
-            <button aria-label="Naar steun ons pagina" href="#">Steun ons</button> 
-            <button aria-label="Wishlist bekijken" href="#">🧡 <span>0</span></button> 
-            <button aria-hidden="true">  
-                <span> </span>
-                <span> </span>
-                <span> </span>
-            </button>
-            <ul> 
-                <li><a href="#"> Home </a></li>
-                <li><a href="zoekdier.html"> Zoek een dier </a></li>
-                <li><a href="#"> Succesvol geplaatst </a></li>
-                <li><a href="#"> Dierenasielen </a></li>
-                <li><a href="#"> Meet Your Match </a></li>
-                <li><a href="#"> Adoptietarieven </a></li>
-                <li><a href="#"> Tips voor de baas </a></li>
-                <li><input type="checkbox" id="dark-mode" name="dark-mode" value="dark-mode" class="visually-hidden">
-                    <label for="dark-mode">Dark mode</label></li>
-            </ul>
-        </nav>
-
-    </header>
-    <main> 
-        <section> <!-- 1e section -->
-            <h1> ikzoekbaas</h1>
-            <ul>
-                <li><img src="img/header-hond.jpg" alt="hond"/></li>
-                <li><img src="img/header-konijn.jpg" alt="konijn"></li>
-                <li><img src="img/header-hond2.jpg" alt="hond2"></li>
-                <li><img src="img/header-hond3.jpg" alt="hond"></li>
-            </ul>
-         </section>
-
-
-        <section> <!-- 2e section -->
-            <h1>Zoek uit <strong>1.006 asieldieren </strong> die op een nieuw baasje wachten</h1>
-
-            <form> 
-                <label for="soort-dier">Soort</label>
-                <select name="dieren" id="soort-dier">
-                    <option value="katten">Katten (500)</option>
-                    <option value="honden">Honden (198)</option>
-                    <option value="konijnen en knagers">Konijnen en knagers (348)</option>
-                    <option value="vogels">Vogels (34)</option>
-                    <option value="katten">Ex-proefdieren (11)</option>
-                    <option value="katten">Overige (0)</option>
-                </select>
-
-                <label for="woonplaats">Zoek in jouw buurt <strong> (optioneel) </strong> </label>
-                <input type="text" name="name" id="woonplaats" required> <!-- dit veld is verplicht, anders kan de gebruiker niet verder-->
-
-                <select name="km" id="aantal km">
-                    <option value="">+10 km</option>
-                    <option value="">+25 km</option>
-                    <option value="">+50 km</option>
-                </select>
-
-                <label for="rassen">Ras </label>
-                <select name="dierenras" id="rassen">
-                    <option value="geen-voorkeur">Geen voorkeur</option>
-                    <option value="onbekend">Onbekend</option>
-                    <option value="kortharig">Kortharig</option>
-                    <option value="langharig">Langharig</option>
-                    <option value="oosters">Oosters</option>
-                    <option value="overig">Overig</option>
-                </select>
-
-                <label for="leeftijd-dier">Leeftijd </label>
-                <select name="leeftijd" id="leeftijd-dier">
-                    <option value="geen-voorkeur">Geen voorkeur</option>
-                    <option value="jonger-dan-1">Jonger dan 1 jaar</option>
-                    <option value="1-tot-3">1 tot 3 jaar</option>
-                    <option value="4-tot-8">4 tot 8 jaar</option>
-                    <option value="9-of-ouder">9 jaar of ouder</option>
-                </select>
-
-                <button aria-label="Zoeken" href="#">Zoeken</button>             
-            </form>
-        </section>
-
-        <section> <!-- 3e section -->
-            <h1> Asieldier</h1> <h1>in 't zonnetje</h1>
-            <p> Alle dieren verdienen een nieuw thuis, sommige kunnen daar wel wat extra hulp bij gebruiken. 
-                De dierenasielen zetten wekelijks een paar dieren in de spotlight. Maak kennis met onze asieldieren in 't zonnetje!</p>
-                
-            <ul> 
-                <li> 
-                    <a href="#">
-                        <h2> Tom </h2>
-                        <img src="img/in-het-zonnetje-1.jpeg" alt="Hond in het zonnetje">
-                    </a>
-                </li>
-                <li> 
-                    <a href="#">
-                        <h2> Tom </h2>
-                        <img src="img/in-het-zonnetje-2.jpeg" alt="Hond in het zonnetje">
-                    </a>
-                </li>
-                <li> 
-                    <a href="#">
-                        <h2> Tom </h2>
-                        <img src="img/in-het-zonnetje-3.jpeg" alt="Hond in het zonnetje">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <h2> Tom </h2>
-                        <img src="img/in-het-zonnetje-4.jpeg" alt="Hond in het zonnetje">
-                    </a>
-                </li>
-            </ul>
-        </section>
-
-        <section> <!-- 4e section -->
-            <h1> Succesvol geplaatst</h1>
-            <a href="#">Bekijk meer verhalen ></a>
-
-            <ul>
-                <li id="metverloop">
-                    <a href="#">
-                        <h2> Hazel </h2>
-                        <p> Hazel hebben wij op 20-09-2021 geadopteerd uit het Dierenasiel Zuidwolde in Groningen. 
-                            Hazel is 6 jaar en een aanhankelijke hond. Zij heeft wel stress voor alles wat nieuw is.
-                            In...</p>
-                        <img src="img/hazel-hond.jpeg" alt="Hond Hazel">
-                    </a>
-                   
-                </li>
-                <li id="metverloop">
-                    <a href="#">
-                        <h2> Fred </h2>
-                        <p> Fred is nu iets langer dan een maand bij ons thuis en aan de foto te zien vermaakt hij zich prima hier. 
-                            Fred houdt vooral heel erg van jagen en...</p>
-                        <img src="img/fred-kat.jpeg" alt="Kat Fred">
-                    </a>
-                  
-                </li>
-                <li id="metverloop"> 
-                    <a href="#">
-                        <h2> Bennie </h2>
-                        <p> Het is nu zo'n 2.5 jaar geleden dat wij van Tilburg naar Groningen reden om Bentley, nu Bennie, op te halen. 
-                        Wat een lieverd is het toch, vooral met kinderen...</p>
-                        <img src="img/bennie-hond.jpeg" alt="Hond Bennie">
-                    </a>
-                    
-                </li>
-            </ul>
-        </section>
-    </main> 
-
-    <footer> 
-        <button aria-label = "terug omhoog">⬆</button>
-        <ul> <!-- footer > 1e ul-->
-            <li> <a href="#"> Zoek asieldieren</a></li>
-            <li> <a href="#"> Succesvol geplaatst</a></li>
-            <li> <a href="#"> Dierenasielen</a></li>
-            <li> <a href="#"> Tips voor de baas</a></li>
-            <li> <a href="#"> Meet Your Match</a></li>
-            <li> <a href="#"> Steun ons</a></li>
-        </ul>
-        <section> 
-        <p> 👤 </p>
-        <p> Maak gratis een account aan en ontvang een melding zodra er een nieuw dier voldoet aan jouw zoekcriteria</p>
-        <a href="#">Account aanmaken ></a>
-        <a href="#">Inloggen ></a>
-    </section>
-
-        <p> Volg ons</p>
-        <ul> <!-- footer > 2e ul-->
-            <li> <a href="#"> <img src="img/facebook-icon.png"/> </a> </li>
-            <li> <a href="#"> <img src="img/twitter-icon.png"/> </a> </li>
-            <li> <a href="#"> <img src="img/instagram-icon.png"/> </a> </li>
-            <li> <a href="#"> <button> Nieuwsbrief </button> </a> </li>
-        </ul>
-
-        <p> Copyright © 2021 Dierenbescherming </p>
-            
-    </footer>
-    <script src="scripts/script.js"></script>
-    <script src="scripts/script-darkmode.js"></script>
-
+	<script src="scripts/script.js"></script>
 </body>
+	
 </html>
