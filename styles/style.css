@@ -1,213 +1,256 @@
+/* dit is de algemene css van de gehele website */
+ 
+ 
  /************************** 
         GEHELE WEBSITE 
   **************************/
 
-* {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;                        /* alle standaard marges rondom de pagina verwijderen */
 }
+  
 
 :root {
-    --background-button-color:#ff5400;
-    --text-color: #ffffff;
-    --click-text-color: #222;
+    --primaire-highlight-color:#ff5400;
+    --selected-highlight-color:#9c3b0b;
+    --secundaire-highlight-color: #222;
+    --basic-white-color: #ffffff;
+    --grey-text-color:#959595; 
+    --background-color: #efefef;
+    --search-button-color:#dfdf00;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
 }
+
+/************************** 
+        DARKMODE
+**************************/
+@media (prefers-color-scheme:dark) {
+    :root {
+      --background-color:#222;
+      --secundaire-highlight-color: #ffffff;
+      --basic-white-color: rgb(204, 204, 204);
+
+
+    }
+  }
+  
+  :root.darkMode {
+    --background-color:#222;
+    --secundaire-highlight-color: #ffffff;
+    --basic-white-color: rgb(204, 204, 204);
+
+  }
+  
+
+  .visually-hidden {                /* zorgt ervoor dat je de checkbox niet ziet*/
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height:1px;
+    overflow:hidden;
+    position: absolute;
+    white-space: nowrap;
+  } 
+
+  nav li:nth-of-type(8) {
+    color: var(--primaire-highlight-color);
+    background-color: var(--basic-white-color);
+    margin: 1em 0 0 0;
+    padding:.5em .5em .5em 1em;
+
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: left;
+  }
 
   /************************** 
             HEADER 
   **************************/
 
 .logo {
-      position: absolute;
-      width: 60px;  
-      margin:1em;
+    width: 60px;  
 } 
 
 header {
-    position: fixed;                                /* header staat vast tijdens scrollen */ 
-    z-index:50;
-    display:flex;                 
+  position: sticky;                                /* header staat op een vaste plek, wanneer hij bovenaan komt blijft hij plakken*/ 
+  z-index:100;
+  display:flex;  
+  justify-content:space-between; 
+  align-items: center;
+  top:0;             
 
-    background-color: blue;
-    width: 100%;
+  background-color: white;
+  width: 100%;
+  padding: 0 1em;
 }
 
 
-    /************************** 
-            NAV
-  **************************/
+  /************************** 
+          NAV
+**************************/
 
 nav {
-    position: absolute;
-    display: flex;
-    right:0;
-    margin:1em;
+  display: flex;
 }
 
 header nav ul li a {
-    color:var(--text-color);
-      
-    font-size: 1.375em;
-    font-weight: 600;
-    text-decoration: none;
-    line-height: 2em;
+  color:var(--basic-white-color);
+    
+  font-size: 1.375em;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 2em;
 
-    margin: 3em 1em 1em 1em;                      /* ????? ik wil aan de bovenkant meer margin */ 
+  margin: 3em 1em 1em 1em;                      /* ????? ik wil aan de bovenkant meer margin */ 
 }
 
 header nav ul li a:hover {                        /* als je over de listitems in het menu hovert */ 
-    color:var(--click-text-color);
+  color:var(--secundaire-highlight-color);
 }
 
 nav.menuOpen ul {
-    transform:translateX(0);                        /* classlist uit javascript */ 
+  transform:translateX(0);                        /* classlist uit javascript */ 
 }
 
 nav ul {
-    position: fixed;                                /* uit voorbeeldcode oefening 3 Media Queries en Grid gehaald */ 
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
+  position: fixed;                                /* uit voorbeeldcode oefening 3 Media Queries en Grid gehaald */ 
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
 
-    transform:translateX(100%);                     /* de ul wordt helemaal uit beeld gebracht */ 
-    transition: .3;
+  transform:translateX(100%);                     /* de ul wordt helemaal uit beeld gebracht */ 
+  transition: .3;
 
-    background-color: #ff5400;
-    list-style: none;
+  background-color: #ff5400;
+  list-style: none;
 }
 
-ul button {
-    background-color:yellow;
-    color: red;
+nav ul button {
+  background-color:yellow;
+  color: red;
 }
 
-button:nth-of-type(1) {                           /* dit spreekt alleen de 1e button van alle buttons aan */
+nav button:nth-of-type(1) {                           /* dit spreekt alleen de 1e button van alle buttons in de nav aan */
+  position: relative;
+  cursor: pointer;
+
+  padding:1em;
+  right:.5em;
+  border: none;
+  height:2.9em;                     /* even groot als de andere 2 buttons*/
+
+
+  background-color:var(--primaire-highlight-color);
+  color:var(--basic-white-color);
+
+  font-weight:400;
+  font-size:0.9em;
+  text-transform:uppercase;
+}
+
+nav button:nth-of-type(2) {                            /* dit spreekt alleen de 2e button van alle buttons in de nav aan, etc... */
     position: relative;
-    z-index:100;
-    padding:1em;
-    right:.5em;
-    border: none;
-
-    background-color:var(--background-button-color);
-    color:var(--text-color);
-
-    font-weight:400;
-    font-size:0.9em;
-    text-transform:uppercase;
-}
-
-button:nth-of-type(2) {                            /* dit spreekt alleen de 2e button van alle buttons aan */
-    position: relative;
-    z-index:100;
     display: flex;
     justify-content:center;
-
+    cursor: pointer;
 
     padding:1em;
-    border: none;
-
+    border:0;
     width:3em;
     height:3em;
 
-    background-color:var(--text-color);
+    background-color:var(--basic-white-color);
+    }
+
+
+nav button:nth-of-type(2) span {
+    position:absolute;
+    right:.1em;
+    top:.1em;
+    
+    min-width:1.25em; 
+    padding:0 .25em;
+    
+    border-radius:.625em;
+    
+    font-size:1em;
+    text-align:center;
+    line-height:1.25em;
+    color:white;
+    background-color:var(--primaire-highlight-color);
 }
 
+
+
 nav button:nth-of-type(3) { 
-    background-color:var(--background-button-color);
-    border: none;
+  background-color:var(--primaire-highlight-color);
+  border: none;
 
-    width:3em;
-    height:3em;
-      
-    position: relative;
-    z-index:100;
+  width:3em;
+  height:3em;
+    
+  position: relative;
+  cursor: pointer;
 
-    display:flex;
-    justify-content: center;
-    align-items:center;
-  }
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  z-index: 100;
+}
 
 /************************** 
-     NAV: HAMBURGER MENU
+   NAV: HAMBURGER MENU
 **************************/
 
-nav button:nth-of-type(3) span { 
-    display:block;
-    width:30%;
-    height:1px;
-    background-color:black;
+nav button:nth-of-type(3) span {                    /* code sanne */
+  display:block;
+  width:30%;
+  height:1px;
+  background-color:black;
 
-    position: absolute;
-  }
+  position: absolute;
+}
 
 nav button:nth-of-type(3) span:nth-of-type(1) {
-    transform: translateY(-5px);
-    background-color: var(--click-text-color);
-  } 
+  transform: translateY(-5px);
+  background-color: var(--secundaire-highlight-color);
+} 
 
 nav button:nth-of-type(3) span:nth-of-type(2) {
-    background-color: var(--click-text-color);
+  background-color: var(--secundaire-highlight-color);
 } 
 
 nav button:nth-of-type(3) span:nth-of-type(3) {
-    transform: translateY(5px);
-    background-color: var(--click-text-color);
+  transform: translateY(5px);
+  background-color: var(--secundaire-highlight-color);
 } 
 
 nav.menuOpen button:nth-of-type(3) span:nth-of-type(1) {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 } 
 
 nav.menuOpen button:nth-of-type(3) span:nth-of-type(2) {
-    opacity: 0;
+  opacity: 0;
 } 
 
 nav.menuOpen button:nth-of-type(3) span:nth-of-type(3) {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 } 
 
-/************************** 
-NAV: UITKLAP MENU ZOEK EEN DIER
-**************************/
-
-nav.menuOpen li:nth-of-type(2) {
-    background-color: black;
-} 
-
-/************************** 
-        MAIN
-**************************/
-
-main img {
-    position: absolute;
-    
-    width: 100%;
-    height: auto;
-}
-
-main h1 {
-    background-color:gold;
-
-    position: relative;
-    z-index:1;
-
-    font-weight:700;
-    font-size:1em;
-    text-transform:uppercase;
-}
 
 
-   /************************** 
+  /************************** 
         SLIDESHOW
   **************************/
   
-main section:nth-of-type(1) {                            /* de eerste section in de main --> slideshow */
+  main section:nth-of-type(1) {                            /* de eerste section in de main --> slideshow */
     position: relative;
 
     /* max-width: 30em; */
@@ -234,7 +277,7 @@ main ul {
     list-style:none;
     }
 
-main li {
+main section:nth-of-type(1) li {
 	position:absolute;
     width:100%;
 
@@ -243,7 +286,7 @@ main li {
 	animation-iteration-count:infinite;
 }
 
-main section ul li img {                                /* alle img van de slideshow */
+main section:nth-of-type(1) ul li img {                                /* alle img van de slideshow */
     height: 15em;
     object-fit: cover;
  
@@ -268,147 +311,162 @@ main li:nth-of-type(4) {
 }
 
 
- /************************** 
-            FORM
-  **************************/
-
-  form {
-      display: grid;
-      grid-template-columns: 2fr 1fr;                   /* fr = fractie, 1 = 1/3, 2 = 2/3, 3  = 3/3*/
-      position: relative;
-
-  }
-
-  label, input, button, select {
-    grid-column-start:1;
-    grid-column-end:3;
-  }
-
-  input:nth-of-type(1) {
-      grid-column-start:1;
-      grid-column-end:2;
-  }
-
-  select:nth-of-type(2) {
-    grid-column-start:2;
-    grid-column-end:3;
-}
-
-main section h1:nth-of-type(1) {
-    color: green;
-    background-color: var(--text-color);
-    border: solid .3em yellow;
-    
-    font-size: 1.375em;
-    text-align: center;
-    line-height: 1.625em;
-    text-transform: none;
-    font-weight: 500;
-
-    
-    position: relative;
-    /* top:6em; */
-    margin-left:auto;
-    margin-right: auto;
-    width: 12em;
-    padding: 1em;
-}
-
-section form {
-    /* position: absolute;
-    top:25em; */
-    max-width: 20em;
-    margin-left:auto;
-    margin-right: auto;
-
-    background-color: green;
-}
-
 /************************** 
-      IN HET ZONNETJE
-  **************************/
+        MAIN
+**************************/
 
-  section:nth-of-type(3) {
-      background-color: red;
-      height: 30em;
-      
-  }
-
-  section:nth-of-type(3) img {
-      width: 9em;
-      height: auto;
-
-      display: flex;
-  }
-
-  section:nth-of-type(3) a {
-   
-   
-  } 
-
-  /************************** 
-        SUCCESVOL GEPLAATST
-  **************************/
-
-  section:nth-of-type(4) {
-    background-color: yellow;
-    height: 25em;
+main section:nth-of-type(1) img {
+    position: absolute;
+    
+    width: 100%;
+    height: auto;
 }
 
-  /********************************************************************
-                            PAGINA 2
-  *********************************************************************/
+main section:nth-of-type(1) h1 {
+    color: var(--primaire-highlight-color);
 
-    /************************** 
-            MAIN
-  **************************/
-  .pagina2 section:nth-of-type(3) {
-      background-color: pink;
-  }
+    position: relative;
+    z-index:1;
 
-  .pagina2 section:nth-of-type(3) img {
-    width: 10em;
-    flex-direction: column;
+    font-weight:700;
+    font-size:1.2em;
+    text-transform:uppercase;
 }
 
-.pagina2 ul {
-    display: flex;
+main section:nth-of-type(1) h1 {
+    position: absolute;
+    top: 50%;
+    left: 1em;
 }
-
+  
   /************************** 
             FOOTER
   **************************/
 
-  footer {
-      background-color: rgb(182, 182, 182);
-  }
+footer {
+    background-color: var(--basic-white-color);
 
-  footer ul {
- display: flex;
- text-decoration: none;
- list-style:none;
+    padding:1em;
+    position: relative;
+}
 
-  }
+/**** 1e ul *****/
 
-  footer li {
-      text-decoration: none;
-      list-style:none;
-  }
+footer > button:first-of-type {          /* omhoog button, met de > selecteer ik ALLEEN de buttons in de footer (niet in ul's, il's, etc.) */
+    background-color:var(--background-color);
+    color: var(--primaire-highlight-color);
+    border: 0;
 
-  footer ul:nth-of-type(1) {
-    width: 1.5em;
-    margin-right: .5em;
+    font-size: 1.2em;
 
+    position: absolute;  
+    right:0;
+    top:0;
+    padding: .5em .8em;
+    cursor: pointer;
+}
+
+footer ul {
+text-decoration: none;
+list-style:none;
+}
+
+footer ul:nth-of-type(1) {
     flex-direction: row;
 }
 
-  footer ul:nth-of-type(2) img {
-      width: 1.5em;
-      margin-right: .5em;
+footer li {
+    text-decoration: none;
+    list-style:none;
+    text-transform: capitalize;
+}
 
-      flex-direction: row;
-  }
+footer li a {
+    color: var(--secundaire-highlight-color);
 
-  footer ul:nth-of-type(2) button {
-    left: 1em;
-  }
+    font-size: .9em;
+    text-decoration: 0;
+    line-height: 2em;
+}
+
+footer li a:hover, footer li a:focus {
+    color: var(--primaire-highlight-color);
+}
+
+footer section p:nth-of-type(1) {           /* icon */
+    font-size:1.7em;
+    margin: 1em 0 0 0;
+}
+
+footer section p:nth-of-type(2) {           /* maak gratis... */
+    font-size:.9em;
+    color: var(--secundaire-highlight-color);
+}
+
+
+footer section a {
+    color: var(--primaire-highlight-color);
+    text-decoration: 0;
+    text-transform: uppercase;
+    font-weight:600;
+    font-size: .9em;
+
+    margin-right:1em;
+}
+
+footer section a:hover {
+    color: var(--secundaire-highlight-color);
+
+}
+
+footer p:nth-of-type(1) {                              /* volg ons */
+    color: var(--grey-text-color);
+
+    font-size: .8em;
+    margin:2em 0 1em 0;
+}
+
+/**** 2e ul *****/
+
+footer p:nth-of-type(2) {               /* copyright*/
+    margin-bottom: 1.5em;
+    color: var(--secundaire-highlight-color);
+    font-size: .9em;
+}
+
+footer ul:nth-of-type(2) {
+  display: flex;
+  flex-direction:row;
+}
+
+footer ul:nth-of-type(2) img {
+    width: 1.5em;
+    margin-right: .5em;   
+    margin-bottom: 1em;
+}
+
+footer ul:nth-of-type(2) button {
+    background-color: var(--primaire-highlight-color);
+    color: var(--basic-white-color);
+
+    padding:1em;
+    left:8em;
+    border: none;
+    height:1em;  
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .9em;
+
+    cursor: pointer;
+}
+
+footer ul:nth-of-type(2) button:hover, footer ul:nth-of-type(2) button:focus {
+    background-color: var(--basic-white-color);
+    color: var(--primaire-highlight-color);
+}
+
+

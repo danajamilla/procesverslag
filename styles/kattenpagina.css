@@ -1,0 +1,148 @@
+/* dit is de css van de tweede pagina (kattenpagina) */
+
+
+/************************** 
+            MAIN
+**************************/
+  
+
+section:nth-of-type(1) h2 {
+    color: var(--secundaire-highlight-color);
+
+    text-transform:uppercase;
+    font-size: 1.5em;
+
+    position: absolute;
+    z-index: 90;
+    left:.750em;
+    top:60%;
+}
+
+section:nth-of-type(2) {
+    margin-left:1em;            /* ruimte links en rechts vanaf de rand */
+    margin-right:1em;
+}
+
+section:nth-of-type(2) h1 {
+    color: var(--secundaire-highlight-color);
+
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.2em;
+    font-weight: 500;
+
+    margin:2em;
+}
+
+  /************************** 
+        FILTEREN + FORM
+  **************************/
+  
+form {
+    display: flex;
+    flex-direction: column
+}
+
+form label:nth-of-type(1) {
+    color: var(--grey-text-color);
+    font-size: .9em;
+}
+ 
+section:nth-of-type(2) select {
+    color: var(--grey-text-color);
+    background-color:var(--basic-white-color);
+    
+    padding: .5em;
+    margin-top:.5em;
+    border: solid .1em var(--grey-text-color);
+    border-radius: .2em;
+}
+
+/************************** 
+         KATTEN
+**************************/
+  
+section:nth-of-type(3) {
+    display:flex;
+    margin: 1em;
+}
+
+section:nth-of-type(3) ul {
+  flex-direction: column;
+  flex-grow:1;                   /* de ul pakt de ruimte van zn parent (de section) */
+}
+
+section:nth-of-type(3) li {
+  background-color: var(--basic-white-color);
+
+  position: relative;
+  margin-bottom:1em;
+}
+
+section:nth-of-type(3) article {
+    display: flex;
+}
+
+section:nth-of-type(3) img {
+    width: 7em;
+    height: 7em;
+
+    object-fit: cover;
+    display: block;
+}
+
+section:nth-of-type(3) h2 {
+    color: var(--primaire-highlight-color);  
+    
+    font-size: 1.2em;  
+    padding: .25em .5em;
+}
+
+section:nth-of-type(3) span {
+    color:var(--basic-white-color);
+    background-color: var(--primaire-highlight-color);
+      
+    position: absolute;
+    right:0;
+    bottom:0;
+    padding:.5em;
+
+    font-size: .7em;  
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 15.7em;
+    text-align: center;
+}
+
+section:nth-of-type(3) span > span {
+    color: var(--primaire-highlight-color);
+    background-color: var(--basic-white-color);
+
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom:0.7em;
+    margin-right:19em;
+
+    width: 2em;
+    height: 2em;
+}
+
+
+ section:nth-of-type(3) article button {
+    background:0;
+    font-size: 1.3em;
+
+    border: 0;
+    position: absolute;
+    right:.25em;
+    top:.25em;
+}
+
+section:nth-of-type(3) article button:hover {               /* extra zelfverzonen toevoeging */
+    font-size:1.6em;
+}
+
+
+ 
+
+ 

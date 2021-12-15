@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dierenasiel</title>
     <link rel="stylesheet" href="styles/style.css" /> 
+    <link rel="stylesheet" href="styles/kattenpagina.css" /> 
+
 </head>
 <body>
     <header> 
 
         <a href="index.html"> <img class="logo" src="img/logo-ikzoekbaas.jpg" alt="logo asiel"> </a>
         <nav>
-            <button aria-hidden="true" href="#">Steun ons</button> 
-            <button aria-hidden="true" href="#">🧡</button> 
+            <button aria-label="Naar steun ons pagina" href="#">Steun ons</button> 
+            <button aria-label="Wishlist bekijken" href="#">🧡 <span>0</span></button> 
             <button aria-hidden="true">  
                 <span> </span>
                 <span> </span>
                 <span> </span>
             </button>
+        
             <ul> 
                 <li><a href="#"> Home </a></li>
                 <li><a href="#"> Zoek een dier </a></li>
@@ -26,12 +29,16 @@
                 <li><a href="#"> Meet Your Match </a></li>
                 <li><a href="#"> Adoptietarieven </a></li>
                 <li><a href="#"> Tips voor de baas </a></li>
+                <li><input type="checkbox" id="dark-mode" name="dark-mode" value="dark-mode" class="visually-hidden">
+			    <label for="dark-mode">Dark mode</label></li>
             </ul>
         </nav>
 
     </header>
-    <main class="pagina2"> 
-        <section> <!-- 1e section -->
+    <main>
+        <section> <!-- 1e section: slideshow -->
+            <h1> ikzoekbaas</h1>
+            <h2> Zoek een dier</h2>
             <ul>
                 <li><img src="img/header-hond.jpg" alt="hond"/></li>
                 <li><img src="img/header-konijn.jpg" alt="konijn"></li>
@@ -40,10 +47,7 @@
             </ul>
          </section>
 
-         <h1> ik zoek baas</h1>
-         <h2> Zoek een dier</h2>
-
-        <section> <!-- 2e section -->
+        <section> <!-- 2e section: filteroptie -->
             <h1>466 resultaten voor katten</h1>
 
             <form> 
@@ -56,20 +60,56 @@
             </form>
         </section>
 
-        <section> <!-- 3e section -->
+        <section> <!-- 3e section: katten -->
             <ul> 
                 <li> 
-                    <a href="#">
-                        <img src="img/mustang-kat.jpeg" alt="Kat mustang">
-                    </a>
+                    <article> <!-- 1e article -->
+                        <a href="#"> <img src="img/mustang-kat.jpeg" alt="zwarte kat"> </a>
+                        <h2>Dropje</h2>
+                        <a href="#"> <span><span>➕</span>Nieuw in 't asiel </span> </oa>
+                        <button aria-label="Add to Favorites">🤍</button>
+                    </article>
+                </li>
+
+                <li> 
+                    <article> <!-- 2e article -->
+                        <a href="#"> <img src="img/micky-kat.jpeg" alt="gevlekte kat micky"> </a>
+                        <h2> Micky</h2>
+                        <button aria-label="Add to Favorites">🤍</button>
+                    </article>
+                </li>
+
+                <li> 
+                    <article> <!-- 3e article -->
+                        <a href="#"> <img src="img/nibble-kat.jpeg" alt="rode kat nibble"> </a>
+                        <h2> Nibble</h2>
+                        <button aria-label="Add to Favorites">🤍</button>
+                    </article>
+                </li>
+
+                <li> 
+                    <article> <!-- 4e article -->
+                        <a href="#"> <img src="img/twingo-kat.jpeg" alt="zwarte kat nibble"> </a>
+                        <h2> Twingle</h2>
+                        <button aria-label="Add to Favorites">🤍</button>
+                    </article>
+                </li>
+
+                <li> 
+                    <article> <!-- 5e article -->
+                        <a href="#"> <img src="img/julia-kat.jpeg" alt="cyperse kat nibble"> </a>
+                        <h2> Julia</h2>
+                        <button aria-label="Add to Favorites">🤍</button>
+                    </article>
                 </li>
 
             </ul>
-    </section>
+        </section>
             
     </main> 
 
     <footer> 
+        <button aria-label = "terug omhoog">⬆</button>
         <ul> <!-- footer > 1e ul-->
             <li> <a href="#"> Zoek asieldieren</a></li>
             <li> <a href="#"> Succesvol geplaatst</a></li>
@@ -78,11 +118,12 @@
             <li> <a href="#"> Meet Your Match</a></li>
             <li> <a href="#"> Steun ons</a></li>
         </ul>
-
-        <p> 👤 <p>
+        <section> 
+        <p> 👤 </p>
         <p> Maak gratis een account aan en ontvang een melding zodra er een nieuw dier voldoet aan jouw zoekcriteria</p>
         <a href="#">Account aanmaken ></a>
         <a href="#">Inloggen ></a>
+    </section>
 
         <p> Volg ons</p>
         <ul> <!-- footer > 2e ul-->
@@ -96,5 +137,7 @@
             
     </footer>
     <script src="scripts/script.js"></script>
+    <script src="scripts/script-darkmode.js"></script>
+
 </body>
 </html>
